@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule (.*) public/index.php/$1
+
+AuthName "Page d'administration"
+AuthType Basic
+AuthUserFile "C:\wamp64\www\weneedplayer\admin\.htpasswd"
+Require valid-user
